@@ -1,12 +1,10 @@
 from bs4 import BeautifulSoup
 import requests
 import re
-import urllib
+import urllib2
 import requests
-import mechanize
-from bs4 import BeautifulSoup
 import re
-import csv
+import csv 
 from itertools import izip
 myfile = open("myfile.csv",'wb')
 spamwriter = csv.writer(open("myfile.csv",'wb'))
