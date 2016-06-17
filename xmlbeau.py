@@ -18,7 +18,7 @@ spamwriter = csv.writer(myfile, delimiter='\t',
                             quotechar='|', quoting=csv.QUOTE_MINIMAL)
 
 
-url = "http://sitemaps.trustpilot.com/domains11_it-ch.xml"
+url = "" #insert xml_sitemap link/url
 
 
 
@@ -32,11 +32,11 @@ soup = BeautifulSoup(data)
 
 
 
-for loc in soup.findAll("loc"):
+for loc in soup.findAll("loc"):# you can also add other parameters
     try:
         writer.writeheader()
 
-        spamwriter.writerow([loc])
+        spamwriter.writerow([loc]) #simple way to genrate CSV
         print loc
     except IndexError:
         spamwriter.writerow([loc])
@@ -45,4 +45,5 @@ for loc in soup.findAll("loc"):
 
 
 myfile.close()
+#note:- this script just only for learning purpose and i am not submitted my complete code,this is just a segment of my script.
 
